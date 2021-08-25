@@ -40,10 +40,15 @@ namespace SQLDemo
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Console.WriteLine(SupId.Text);
-            MySqlCommand cmd = new MySqlCommand($"select Company from ccap_suppliers where Supplier_id=@SupID", conn);
+            MySqlCommand cmd = new MySqlCommand("select Company from ccap_suppliers where Supplier_id=@SupID", conn);
             cmd.Parameters.AddWithValue("@SupID", SupId.Text);
             string name = Convert.ToString(cmd.ExecuteScalar());
             SupName.Text = name;
+        }
+
+        private void Window_Unloaded(object sender, RoutedEventArgs e)
+        {
+            conn.Close();
         }
     }
 }

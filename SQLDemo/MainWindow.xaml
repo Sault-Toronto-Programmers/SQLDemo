@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
     <Grid>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="391,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"  x:Name="SupId"/>
         <TextBlock HorizontalAlignment="Left" Height="0" Margin="427,82,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.5,0.5">
