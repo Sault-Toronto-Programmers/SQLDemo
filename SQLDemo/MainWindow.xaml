@@ -5,25 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SQLDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="391,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"  x:Name="SupId"/>
-        <TextBlock HorizontalAlignment="Left" Height="0" Margin="427,82,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.5,0.5">
-            
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="239,85,0,0" TextWrapping="Wrap" Text="Supplier ID" VerticalAlignment="Top" Height="23" RenderTransformOrigin="1.069,0.507">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.984"/>
-                    <TranslateTransform X="-0.003" Y="-0.568"/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="285,133,0,0" TextWrapping="Wrap" Text="The corresponding supplier name is " VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="348,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" x:Name="SupName"/>
-        <Button Content="Find" HorizontalAlignment="Left" Margin="601,85,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        Title="Supplier List" Height="450" Width="800" Loaded="Window_Loaded" Unloaded="Window_Unloaded">
+ 
+        
+        
 
-    </Grid>
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock HorizontalAlignment="Left" Text="Supplier ID" Margin="10,10,10,10" />
+            <TextBox HorizontalAlignment="Left"  Width="120"  x:Name="City" Margin="40,10,40,40" />
+            <Button Content="Find Suppliers" Margin="40,10,40,40" Click="Button_Click"></Button>
+        </StackPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBlock HorizontalAlignment="Center">The companies in the selected city are</TextBlock>
+            <DataGrid x:Name="CompanyList" HorizontalAlignment="Stretch" >
+                
+            </DataGrid>
+        </StackPanel>
+        
+    </StackPanel>
 </Window>
